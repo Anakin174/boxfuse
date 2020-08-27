@@ -1,6 +1,9 @@
 #!/bin/bash
 apt update
-apt install maven default-jdk tomcat8 git -y
+apt install maven default-jdk tomcat8 -y
 git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-mvn -f /boxfuse-sample-java-war-hello/pom.xml clean package
-
+cd boxfuse-sample-java-war-hello
+mvn clean package
+cd target
+cp hello-1.0.war /var/lib/tomcat8/webapps
+service tomcat8 restart

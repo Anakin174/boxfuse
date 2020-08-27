@@ -8,6 +8,7 @@
 
 <h2>Hello! I get it from Pycharm</h2>
 
+
 <p>This Instance is running on <strong><%= System.getenv("BOXFUSE_PLATFORM_NAME") %>
 </strong> and has the id <strong><%= System.getenv("BOXFUSE_INSTANCE_ID") %>
 </strong>.</p>
